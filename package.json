@@ -6,7 +6,7 @@
   "description": "Recipe application",
   "scripts": {
     "start": "parcel",
-    "build": "parcel build --dist-dir ./dist"
+    "build": "parcel build --dist-dir ./dist2"
   },
   "author": "Mikael",
   "license": "ISC",
@@ -18,6 +18,7 @@
   "dependencies": {
     "@swc/helpers": "^0.2.13",
     "core-js": "^3.19.1",
+    "fraction.js": "^4.1.1",
     "regenerator-runtime": "^0.13.9"
   }
 }
