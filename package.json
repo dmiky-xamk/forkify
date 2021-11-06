@@ -18,7 +18,6 @@
   "dependencies": {
     "@swc/helpers": "^0.2.13",
     "core-js": "^3.19.1",
-    "fractional": "^1.0.0",
     "regenerator-runtime": "^0.13.9"
   }
 }
