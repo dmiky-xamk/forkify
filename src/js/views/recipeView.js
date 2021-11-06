@@ -130,13 +130,12 @@ class RecipeView extends View
 
     _generateMarkupIngredient(ing)
     {
-        console.log(new Fraction(1.88));
         return `
         <li class="recipe__ingredient">
             <svg class="recipe__icon">
             <use href="${icons}#icon-check"></use>
             </svg>
-            <div class="recipe__quantity">${ing.quantity ? ing.quantity.toString() : ""}</div>
+            <div class="recipe__quantity">${ing.quantity ? new Fraction(ing.quantity.toString()).toFraction(true) : ""}</div>
             <div class="recipe__description">
             <span class="recipe__unit">${ing.unit}</span>
             ${ing.description}
