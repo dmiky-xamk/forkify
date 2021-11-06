@@ -1,6 +1,5 @@
 import View from "./View.js";
-import {Fraction} from "fractional";
-// const Fraction = require("fractional").Fraction;
+import {Fraction} from "fraction.js";
 
 // import icons from "../img/icons.svg"; // Parcel 1
 import icons from "url:../../img/icons.svg"; // Parcel 2
@@ -131,12 +130,13 @@ class RecipeView extends View
 
     _generateMarkupIngredient(ing)
     {
+        console.log(new Fraction(1.88));
         return `
         <li class="recipe__ingredient">
             <svg class="recipe__icon">
             <use href="${icons}#icon-check"></use>
             </svg>
-            <div class="recipe__quantity">${ing.quantity ? new Fraction(ing.quantity.toString()) : ""}</div>
+            <div class="recipe__quantity">${ing.quantity ? ing.quantity.toString() : ""}</div>
             <div class="recipe__description">
             <span class="recipe__unit">${ing.unit}</span>
             ${ing.description}
